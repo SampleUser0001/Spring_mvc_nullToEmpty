@@ -11,8 +11,25 @@
 
 	<!-- Spring MVC の機能を使うことを宣言。 -->
 	<!-- この宣言をすることで、 @Component などのアノテーションが使えるようになる。 -->
-	<mvc:annotation-driven />
-	
+
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="false">
+			<bean class="sample.spring.usemvc.converter.Jackson2HttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>application/json;charset=UTF-8</value>
+						<value>text/json;charset=UTF-8</value>
+					</list>
+				</property>
+				<property name="nullToEmpty" value="true" />
+			</bean>
+		</mvc:message-converters>
+</mvc:annotation-driven>
+ 
+ 	<mvc:annotation-driven>
+
+	</mvc:annotation-driven>
+ 
 	<!-- Bean となるクラスファイルが格納されているパッケージを宣言。 -->
 	<!-- Spring はこのパッケージ配下を自動でスキャンし、Bean として登録する。 -->
 	<context:component-scan base-package="sample.spring.usemvc" />
