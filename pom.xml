@@ -18,7 +18,10 @@
     <spring.version>4.1.6.RELEASE</spring.version>
     -->
 
-    <spring.version>5.2.2.RELEASE</spring.version>
+    <!--     <spring.version>5.2.2.RELEASE</spring.version>  -->
+
+    <spring.version>4.2.3.RELEASE</spring.version>
+
     <javax.servlet.version>4.0.1</javax.servlet.version>
 
     <!--
@@ -26,6 +29,13 @@
     <jackson.annotations.version>2.5.1</jackson.annotations.version>
     <jackson.databind.version>2.5.1</jackson.databind.version>
     -->
+
+    <!--
+    <jackson.core.version>2.9.10</jackson.core.version>
+    <jackson.annotations.version>2.9.9</jackson.annotations.version>
+    <jackson.databind.version>2.9.9.3</jackson.databind.version>
+    -->
+
     <jackson.core.version>2.9.10</jackson.core.version>
     <jackson.annotations.version>2.9.9</jackson.annotations.version>
     <jackson.databind.version>2.9.9.3</jackson.databind.version>

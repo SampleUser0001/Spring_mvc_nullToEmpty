@@ -106,6 +106,27 @@ Content-Length: 34
 Server: Jetty(9.4.19.v20190610)
 ```
 
+## 原因の特定と対応方法を探る
+
+1. Springのバージョンを徐々に変えて、どこのバージョンで発生するか調査する。
+   - 4.2.3から発生している。
+2. 発生したバージョンのリリースノートを見る。
+
+### 各バージョン確認
+
+- 5.2.9（最新）：NG
+- 5.0.0：NG
+- 4.3.0：NG
+- 4.2.0：OK
+- 4.2.5：NG
+- 4.2.3：NG
+- 4.2.2：OK
+
+### 4.2.3リリースノート
+
+https://jira.spring.io/secure/ReleaseNote.jspa?version=15296&styleName=Text&projectId=10000&Create=Create&atl_token=AI70-3TVT-15GF-9TME|1b87f3947dae250526c18efb1b7192b435209fa1|lout
+
+
 ## 参考
 
 [山崎屋の技術メモ : Spring MVC を使用して Web アプリケーションの作成。Boot は使わない。](https://www.shookuro.com/entry/2020/03/22/122906)
